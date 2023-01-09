@@ -19,24 +19,22 @@
 
 s = input("write romain here :")
 
-romDictionary={
-"I":1,
-"V":5,
-"X":10,
-"L":50,
-"C":100,
-"D":500,
-"M":1000,
+romDictionary = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000,
 }
 
-s = s.replace("DM","DCCCC").replace("CD","CLLLL").replace("XL","XVVVV")
-s = s.replace("IV","VIIII")
+s = s.replace("CM", "DCCCC").replace("LD", "CCCCL")
+s = s.replace("XC", "LXXXX")
+s = s.replace("XL", "XXXX").replace("IV", "IIII")
+result = 0
 
-def romToInt(int):
-    result = 0
-    for i in int:
-            result += romDictionary[i]
-    return result
+for i in s:
+    result += romDictionary[i]
+print(result)
 
-print(romToInt(s))
-# def rom_to_int(rom):
