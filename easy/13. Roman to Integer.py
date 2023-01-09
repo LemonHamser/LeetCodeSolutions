@@ -29,6 +29,14 @@ romDictionary={
 "M":1000,
 }
 
-print(romDictionary[s])
+s = s.replace("DM","DCCCC").replace("CD","CLLLL").replace("XL","XVVVV")
+s = s.replace("IV","VIIII")
 
+def romToInt(int):
+    result = 0
+    for i in int:
+            result += romDictionary[i]
+    return result
+
+print(romToInt(s))
 # def rom_to_int(rom):
