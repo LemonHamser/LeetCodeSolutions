@@ -30,11 +30,13 @@ romDictionary = {
 }
 
 s = s.replace("CM", "DCCCC").replace("LD", "CCCCL")
-s = s.replace("XC", "LXXXX")
+s = s.replace("XC", "LXXXX").replace("IX", "VIIII")
+s = s.replace("CD", "CCCC")
 s = s.replace("XL", "XXXX").replace("IV", "IIII")
 result = 0
 
 for i in s:
     result += romDictionary[i]
+
 print(result)
 
